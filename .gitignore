@@ -1,0 +1,21 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# opencode / agent config (not needed for the site)
+.agents/
+.claude/
+.opencode/
+skills-lock.json
+AGENTS.md
