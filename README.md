@@ -1,7 +1,7 @@
 # fabianf4.github.io
 
 Personal portfolio of Fabian Esteban Muñoz Lopez — Systems Engineer.  
-🌐 [fabianf4.is-a.dev](https://fabianf4.is-a.dev)
+🌐 [fabianf4.dev](https://fabianf4.dev)
 
 ## Tech
 
