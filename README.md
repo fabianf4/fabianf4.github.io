@@ -1,4 +1,4 @@
-# fabianf4.github.io
+# My portfolio
 
 Personal portfolio of Fabian Esteban Muñoz Lopez — Systems Engineer.  
 🌐 [fabianf4.dev](https://fabianf4.dev)
@@ -9,7 +9,7 @@ Personal portfolio of Fabian Esteban Muñoz Lopez — Systems Engineer.
 - Vanilla JavaScript i18n EN/ES, theme toggle, persistence via localStorage
 - Google Fonts: Inter + JetBrains Mono
 - Contact form via [formsubmit.co](https://formsubmit.co)
-- Hosting: GitHub Pages + custom domain via is-a.dev
+- Hosting: GitHub Pages + custom domain fabianf4.dev
 
 ## Features
 
@@ -56,4 +56,4 @@ Push to `main` → GitHub Pages auto-deploys. Custom domain managed via `CNAME`.
 
 ## Contact
 
-fabianfa.munoz@gmail.com · [@fabianf4](https://github.com/fabianf4) · [LinkedIn](https://www.linkedin.com/in/fabian-mu%C3%B1oz-dev/)
+fabianfa.munoz@gmail.com · [@fabianf4](https://github.com/fabianf4) · [LinkedIn](https://www.linkedin.com/in/fabianf4-dev/)
