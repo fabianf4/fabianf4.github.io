@@ -521,13 +521,13 @@ img {
 .experience__list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 0;
     margin-left: 8px;
 }
 
 .experience__card {
     position: relative;
-    padding: 4px 0 4px 28px;
+    padding: 16px 0 16px 28px;
     border-left: 2px solid var(--color-border);
     transition: border-color var(--transition);
 }
@@ -540,7 +540,7 @@ img {
     content: '';
     position: absolute;
     left: -9px;
-    top: 6px;
+    top: 20px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
