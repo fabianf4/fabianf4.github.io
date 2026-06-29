@@ -48,6 +48,7 @@ const i18n = {
     'proj-2-desc': { en: 'Frontend Mentor challenge \u2014 news homepage layout with CSS Grid.', es: 'Challenge de Frontend Mentor \u2014 p\u00e1gina de noticias con CSS Grid.' },
     'proj-3-desc': { en: 'Frontend Mentor challenge \u2014 responsive landing page with alternating feature blocks.', es: 'Challenge de Frontend Mentor \u2014 landing page responsive con bloques alternados.' },
     'proj-4-desc': { en: 'Frontend Mentor challenge \u2014 multi-page space tourism app built with React 19, Vite, and React Router v7.', es: 'Challenge de Frontend Mentor \u2014 aplicaci\u00f3n multip\u00e1gina de turismo espacial construida con React 19, Vite y React Router v7.' },
+    'proj-5-desc': { en: 'TUI to discover, install, and manage AI agent skills for OpenCode and OpenClaw.', es: 'TUI para descubrir, instalar y gestionar skills de agentes IA para OpenCode y OpenClaw.' },
     'proj-repo': { en: 'Repository', es: 'Repositorio' },
     'proj-live': { en: 'Live', es: 'Demo' },
     'hobbies-title': { en: '🎮\u00a0Hobbies', es: '🎮\u00a0Pasatiempos' },
