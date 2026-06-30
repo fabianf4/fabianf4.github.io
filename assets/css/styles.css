@@ -1,3 +1,11 @@
+/* ============================================================
+   styles.css — Mobile-first
+   Author: Fabian Esteban Muñoz Lopez
+   Breakpoints (min-width):
+     - 480px  → larger phones / phablets (breathing room)
+     - 768px  → tablet / desktop (horizontal layouts)
+   ============================================================ */
+
 *,
 *::before,
 *::after {
@@ -21,6 +29,7 @@
     --max-width: 960px;
     --nav-height: 56px;
     --transition: 200ms ease;
+    --touch-target: 44px;
 }
 
 [data-theme='dark'] {
@@ -100,6 +109,9 @@ img {
     top: 16px;
 }
 
+/* ============================================================
+   NAV
+   ============================================================ */
 .nav {
     position: sticky;
     top: 0;
@@ -133,12 +145,17 @@ img {
 
 .hamburger {
     padding: 0 12px;
-    width: auto;
-    height: 30px;
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
     order: -1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-muted);
+    cursor: pointer;
 }
 
 .hamburger svg {
@@ -201,6 +218,9 @@ img {
     font-weight: 500;
     color: var(--color-muted);
     padding: 4px 0;
+    min-height: var(--touch-target);
+    display: inline-flex;
+    align-items: center;
     position: relative;
     transition: color var(--transition);
 }
@@ -221,6 +241,10 @@ img {
     border-radius: 1px;
 }
 
+.nav--open .nav__link {
+    min-height: var(--touch-target);
+}
+
 .nav__actions {
     display: flex;
     align-items: center;
@@ -232,7 +256,8 @@ img {
     border: 1px solid var(--color-border);
     border-radius: 6px;
     padding: 0 12px;
-    height: 30px;
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
     font-family: var(--font-sans);
     font-size: 13px;
     font-weight: 500;
@@ -264,14 +289,17 @@ img {
     display: block;
 }
 
+/* ============================================================
+   SECTION
+   ============================================================ */
 .section {
-    padding: 80px 0;
+    padding: 48px 0;
 }
 
 .section-header {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     margin-bottom: 48px;
 }
 
@@ -296,20 +324,24 @@ img {
     background: var(--color-border);
 }
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
-    padding: 120px 0 80px;
+    padding: 80px 0 60px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 64px;
+    text-align: center;
+    gap: 32px;
 }
 
 .hero__avatar-wrapper {
     position: relative;
     flex-shrink: 0;
-    width: 250px;
-    height: 250px;
+    width: clamp(180px, 45vw, 250px);
+    aspect-ratio: 1 / 1;
 }
 
 .hero__avatar-wrapper::before {
@@ -323,8 +355,8 @@ img {
 
 .hero__avatar {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;
     object-fit: cover;
     z-index: 1;
@@ -354,6 +386,7 @@ img {
     color: var(--color-muted);
     max-width: 540px;
     line-height: 1.6;
+    margin: 0 auto;
 }
 
 .hero__ctas {
@@ -361,6 +394,7 @@ img {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 8px;
+    justify-content: center;
 }
 
 .hero__meta {
@@ -370,13 +404,19 @@ img {
     margin-top: 12px;
     font-size: 14px;
     color: var(--color-muted);
+    justify-content: center;
 }
 
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
-    padding: 10px 24px;
+    padding: 12px 24px;
+    min-height: var(--touch-target);
     border-radius: 8px;
     font-family: var(--font-sans);
     font-size: 14px;
@@ -408,6 +448,9 @@ img {
     background: var(--color-accent-bg);
 }
 
+/* ============================================================
+   ABOUT
+   ============================================================ */
 .about__text {
     display: flex;
     flex-direction: column;
@@ -419,6 +462,9 @@ img {
     line-height: 1.7;
 }
 
+/* ============================================================
+   SKILLS
+   ============================================================ */
 .skills__group {
     margin-bottom: 32px;
 }
@@ -447,6 +493,9 @@ img {
     font-family: var(--font-mono);
     font-size: 13px;
     padding: 6px 14px;
+    min-height: var(--touch-target);
+    display: inline-flex;
+    align-items: center;
     border-radius: 6px;
     background: var(--color-accent-bg);
     color: var(--color-accent);
@@ -459,6 +508,9 @@ img {
     transform: translateY(-1px);
 }
 
+/* ============================================================
+   EDUCATION
+   ============================================================ */
 .education__list {
     display: flex;
     flex-direction: column;
@@ -518,6 +570,9 @@ img {
     color: var(--color-muted);
 }
 
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
 .experience__list {
     display: flex;
     flex-direction: column;
@@ -589,6 +644,9 @@ img {
     color: var(--color-accent);
 }
 
+/* ============================================================
+   PROJECTS
+   ============================================================ */
 .projects__list {
     display: flex;
     flex-direction: column;
@@ -661,6 +719,7 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    min-height: var(--touch-target);
 }
 
 .project__link::after {
@@ -672,6 +731,9 @@ img {
     transform: translateX(3px);
 }
 
+/* ============================================================
+   HOBBIES
+   ============================================================ */
 .hobbies__chips {
     display: flex;
     flex-wrap: wrap;
@@ -681,6 +743,9 @@ img {
 .hobbies__chip {
     font-size: 14px;
     padding: 8px 18px;
+    min-height: var(--touch-target);
+    display: inline-flex;
+    align-items: center;
     border-radius: 100px;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -693,6 +758,9 @@ img {
     color: var(--color-accent);
 }
 
+/* ============================================================
+   CONTACT
+   ============================================================ */
 .contact__inner {
     display: flex;
     flex-direction: column;
@@ -718,26 +786,27 @@ img {
 
 .contact__input,
 .contact__textarea {
-    padding: 10px 14px;
+    padding: 12px 14px;
     border: 1px solid var(--color-border);
     border-radius: 8px;
     background: var(--color-surface);
     color: var(--color-text);
     font-family: var(--font-sans);
     font-size: 16px;
+    min-height: var(--touch-target);
     transition: border-color var(--transition);
     outline: none;
+}
+
+.contact__textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .contact__input:focus,
 .contact__textarea:focus {
     border-color: var(--color-accent);
     box-shadow: 0 0 0 3px var(--color-accent-ring);
-}
-
-.contact__textarea {
-    min-height: 120px;
-    resize: vertical;
 }
 
 .contact__submit {
@@ -766,8 +835,14 @@ img {
 .contact__social-link {
     font-size: 14px;
     font-weight: 500;
+    min-height: var(--touch-target);
+    display: inline-flex;
+    align-items: center;
 }
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
     border-top: 1px solid var(--color-border);
     padding: 32px 24px;
@@ -779,6 +854,9 @@ img {
     color: var(--color-muted);
 }
 
+/* ============================================================
+   TOAST
+   ============================================================ */
 .toast {
     position: fixed;
     bottom: 24px;
@@ -829,29 +907,21 @@ img {
     background: #e53e3e;
 }
 
-@media (max-width: 767px) {
+/* ============================================================
+   BREAKPOINTS — Progressive enhancement
+   ============================================================ */
+
+@media (min-width: 480px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 32px;
+        padding: 100px 0 80px;
     }
 
-    .hero__avatar-wrapper {
-        width: 210px;
-        height: 210px;
+    .section {
+        padding: 64px 0;
     }
 
-    .hero__avatar {
-        width: 210px;
-        height: 210px;
-    }
-
-    .hero__ctas {
-        justify-content: center;
-    }
-
-    .hero__meta {
-        justify-content: center;
+    .section-header {
+        gap: 16px;
     }
 }
 
@@ -874,6 +944,57 @@ img {
         display: flex;
     }
 
+    .nav__toggle {
+        min-width: 0;
+        min-height: 0;
+        height: 30px;
+    }
+
+    .nav__link {
+        min-height: 0;
+        padding: 4px 0;
+    }
+
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        gap: 64px;
+        padding: 120px 0 80px;
+    }
+
+    .hero__avatar-wrapper {
+        width: 250px;
+        height: 250px;
+        aspect-ratio: auto;
+    }
+
+    .hero__avatar {
+        width: 250px;
+        height: 250px;
+        aspect-ratio: auto;
+    }
+
+    .hero__tagline {
+        margin: 0;
+    }
+
+    .hero__ctas {
+        justify-content: flex-start;
+    }
+
+    .hero__meta {
+        justify-content: flex-start;
+    }
+
+    .btn {
+        min-height: 0;
+        padding: 10px 24px;
+    }
+
+    .skills__chip {
+        min-height: 0;
+    }
+
     .project {
         flex-direction: row;
         align-items: stretch;
@@ -888,6 +1009,14 @@ img {
     .project__body {
         width: 50%;
         justify-content: center;
+    }
+
+    .project__link {
+        min-height: 0;
+    }
+
+    .hobbies__chip {
+        min-height: 0;
     }
 
     .contact__inner {
@@ -906,19 +1035,14 @@ img {
         border-left: 1px solid var(--color-border);
         padding-left: 48px;
     }
-}
 
-@media (max-width: 480px) {
-    .hero {
-        padding: 80px 0 60px;
+    .contact__input {
+        min-height: 0;
+        padding: 10px 14px;
     }
 
-    .section {
-        padding: 48px 0;
-    }
-
-    .section-header {
-        gap: 10px;
+    .contact__social-link {
+        min-height: 0;
     }
 }
 

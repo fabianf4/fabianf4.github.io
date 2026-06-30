@@ -5,7 +5,7 @@ Personal portfolio of Fabian Esteban Muñoz Lopez — Systems Engineer.
 
 ## Tech
 
-- HTML5, CSS3 (custom properties, dark mode, fluid type)
+- HTML5, CSS3 (custom properties, dark mode, fluid type, mobile-first)
 - Vanilla JavaScript i18n EN/ES, theme toggle, persistence via localStorage
 - Google Fonts: Inter + JetBrains Mono
 - Contact form via [formsubmit.co](https://formsubmit.co)
@@ -15,8 +15,8 @@ Personal portfolio of Fabian Esteban Muñoz Lopez — Systems Engineer.
 
 - Bilingual EN/ES with persistent toggle
 - Dark/light mode with persistent toggle and `prefers-color-scheme`
-- Responsive mobile-first layout
-- Accessible: WCAG AA, ARIA labels, skip link, keyboard nav, `prefers-reduced-motion`
+- Responsive mobile-first layout (`min-width` breakpoints at 480px and 768px)
+- Accessible: WCAG AA, ARIA labels, skip link, keyboard nav, `prefers-reduced-motion`, touch targets ≥ 44px on mobile
 - SEO: JSON-LD Person schema, OpenGraph tags, dynamic `<html lang>`
 
 ## Local development
