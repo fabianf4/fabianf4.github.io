@@ -38,7 +38,9 @@ form.addEventListener('submit', function(e) {
 
     setBusy(true);
 
-    fetch(form.action, {
+    var ajaxUrl = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+    fetch(ajaxUrl, {
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
