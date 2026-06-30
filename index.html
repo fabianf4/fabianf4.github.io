@@ -9,23 +9,23 @@
 
     <meta property="og:title" content="Fabian Esteban Muñoz Lopez — Systems Engineer" />
     <meta property="og:description" content="Systems Engineer with experience in enterprise application development and process automation using Power Platform, Python, and SQL Server." />
-    <meta property="og:image" content="https://fabianf4.is-a.dev/assets/img/perfil.jpeg" />
-    <meta property="og:url" content="https://fabianf4.is-a.dev" />
+    <meta property="og:image" content="https://fabianf4.dev/assets/img/perfil.jpeg" />
+    <meta property="og:url" content="https://fabianf4.dev" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="es_CO" />
     <meta property="og:site_name" content="Fabian Esteban Muñoz Lopez" />
     <meta property="og:image:alt" content="Portrait of Fabian Esteban Muñoz Lopez, Systems Engineer" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fabian Esteban Muñoz Lopez — Systems Engineer" />
     <meta name="twitter:description" content="Systems Engineer with experience in enterprise application development and process automation using Power Platform, Python, and SQL Server." />
-    <meta name="twitter:image" content="https://fabianf4.is-a.dev/assets/img/perfil.jpeg" />
+    <meta name="twitter:image" content="https://fabianf4.dev/assets/img/perfil.jpeg" />
 
-    <link rel="canonical" href="https://fabianf4.is-a.dev" />
-    <link rel="alternate" hreflang="en" href="https://fabianf4.is-a.dev" />
-    <link rel="alternate" hreflang="es" href="https://fabianf4.is-a.dev" />
-    <link rel="alternate" hreflang="x-default" href="https://fabianf4.is-a.dev" />
+    <link rel="canonical" href="https://fabianf4.dev" />
+    <link rel="alternate" hreflang="en" href="https://fabianf4.dev" />
+    <link rel="alternate" hreflang="es" href="https://fabianf4.dev" />
+    <link rel="alternate" hreflang="x-default" href="https://fabianf4.dev" />
 
     <link rel="preload" as="image" href="assets/img/perfil.jpeg" fetchpriority="high" />
 
@@ -38,14 +38,25 @@
         "@type": "Person",
         "name": "Fabian Esteban Muñoz Lopez",
         "jobTitle": "Systems Engineer",
-        "url": "https://fabianf4.is-a.dev",
+        "url": "https://fabianf4.dev",
         "knowsAbout": ["Power Platform", "Power Apps", "Power Automate", "Power BI", "Power Pages", "Copilot Studio", "Python", "JavaScript", "TypeScript", "React", "Node.js", "Express", "SQL", "SQL Server", "SharePoint", "Git", "Docker"],
+        "knowsLanguage": ["es", "en"],
         "email": "fabianfa.munoz@gmail.com",
-        "image": "https://fabianf4.is-a.dev/assets/img/perfil.jpeg",
-        "address": { "@type": "PostalAddress", "addressCountry": "CO" },
+        "image": "https://fabianf4.dev/assets/img/perfil.jpeg",
+        "address": { "@type": "PostalAddress", "addressCountry": "CO", "addressRegion": "Boyacá" },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Pedagógica y Tecnológica de Colombia",
+            "url": "https://www.uptc.edu.co"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Banco de la República de Colombia",
+            "url": "https://www.banrep.gov.co"
+        },
         "sameAs": [
             "https://github.com/fabianf4",
-            "https://www.linkedin.com/in/fabian-mu%C3%B1oz-dev/"
+            "https://www.linkedin.com/in/fabianf4-dev/"
         ]
     }
     </script>
@@ -58,9 +69,9 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
-
-    <nav class="nav" aria-label="Main navigation">
+    <header class="site-header">
+        <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
+        <nav class="nav" aria-label="Main navigation">
         <div class="nav__inner">
             <a href="#" class="nav__logo">fabianf4.dev</a>
             <ul class="nav__list">
@@ -87,7 +98,8 @@
                 </button>
             </div>
         </div>
-    </nav>
+        </nav>
+    </header>
 
     <main id="main">
         <section class="hero" aria-label="Introduction">
@@ -95,9 +107,9 @@
                 <img src="assets/img/perfil.jpeg" alt="Fabian Esteban Muñoz Lopez" class="hero__avatar" width="250" height="250" />
             </div>
             <div class="hero__content">
-                <span class="hero__greeting" data-i18n="hero-greeting">👋 Hi, my name is</span>
-                <h1 class="hero__name">Fabian Esteban<br />Muñoz Lopez</h1>
-                <p class="hero__tagline" data-i18n="hero-tagline">⚡ Systems Engineer with experience in enterprise application development and process automation using Power Platform, Python, and SQL Server.</p>
+                <span class="hero__greeting" data-i18n-html="hero-greeting"><span aria-hidden="true">👋</span> Hi, my name is</span>
+                <h1 class="hero__name">Fabian Esteban<span class="visually-hidden">, </span><br />Muñoz Lopez</h1>
+                <p class="hero__tagline" data-i18n-html="hero-tagline"><span aria-hidden="true">⚡</span> Systems Engineer with experience in enterprise application development and process automation using Power Platform, Python, and SQL Server.</p>
             <div class="hero__ctas">
                 <a href="assets/pdf/resume.pdf" class="btn btn--primary" id="resume-link" download="CV Fabian Muñoz.pdf" data-i18n-download-es="HV Fabian Muñoz.pdf" data-i18n="hero-cta-resume">Download Resume</a>
                 <a href="#contact" class="btn btn--secondary" data-i18n="hero-cta-contact">Get in touch</a>
@@ -106,7 +118,7 @@
 
         <section class="section" id="about" aria-labelledby="about-title">
             <div class="section-header">
-                <h2 class="section-title" id="about-title" data-i18n="about-title">🙋&nbsp;About me</h2>
+                <h2 class="section-title" id="about-title" data-i18n-html="about-title"><span aria-hidden="true">🙋</span>&nbsp;About me</h2>
                 <span class="section-line"></span>
             </div>
             <div class="about__text">
@@ -117,7 +129,7 @@
 
         <section class="section" id="skills" aria-labelledby="skills-title">
             <div class="section-header">
-                <h2 class="section-title" id="skills-title" data-i18n="skills-title">🛠️&nbsp;Skills</h2>
+                <h2 class="section-title" id="skills-title" data-i18n-html="skills-title"><span aria-hidden="true">🛠️</span>&nbsp;Skills</h2>
                 <span class="section-line"></span>
             </div>
 
@@ -173,7 +185,7 @@
 
         <section class="section" id="experience" aria-labelledby="experience-title">
             <div class="section-header">
-                <h2 class="section-title" id="experience-title" data-i18n="experience-title">💼&nbsp;Experience</h2>
+                <h2 class="section-title" id="experience-title" data-i18n-html="experience-title"><span aria-hidden="true">💼</span>&nbsp;Experience</h2>
                 <span class="section-line"></span>
             </div>
             <div class="experience__list">
@@ -206,7 +218,7 @@
 
         <section class="section" id="education" aria-labelledby="education-title">
             <div class="section-header">
-                <h2 class="section-title" id="education-title" data-i18n="education-title">🎓&nbsp;Education</h2>
+                <h2 class="section-title" id="education-title" data-i18n-html="education-title"><span aria-hidden="true">🎓</span>&nbsp;Education</h2>
                 <span class="section-line"></span>
             </div>
             <div class="education__list">
@@ -229,7 +241,7 @@
 
         <section class="section" id="courses" aria-labelledby="courses-title">
             <div class="section-header">
-                <h2 class="section-title" id="courses-title" data-i18n="courses-title">📚&nbsp;Courses &amp; Training</h2>
+                <h2 class="section-title" id="courses-title" data-i18n-html="courses-title"><span aria-hidden="true">📚</span>&nbsp;Courses &amp; Training</h2>
                 <span class="section-line"></span>
             </div>
             <div class="education__list">
@@ -252,7 +264,7 @@
 
         <section class="section" id="projects" aria-labelledby="projects-title">
             <div class="section-header">
-                <h2 class="section-title" id="projects-title" data-i18n="projects-title">🚀&nbsp;Projects</h2>
+                <h2 class="section-title" id="projects-title" data-i18n-html="projects-title"><span aria-hidden="true">🚀</span>&nbsp;Projects</h2>
                 <span class="section-line"></span>
             </div>
             <div class="projects__list">
@@ -269,8 +281,8 @@
                             <span class="project__tag">Chalk</span>
                         </div>
                         <div class="project__links">
-                            <a href="https://github.com/fabianf4/ezskills" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo">Repository</a>
-                            <a href="https://www.npmjs.com/package/@fabianf4/ezskills" target="_blank" rel="noreferrer" class="project__link">npm</a>
+                            <a href="https://github.com/fabianf4/ezskills" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo" data-i18n-aria="proj-aria-ezskills-repo">Repository</a>
+                            <a href="https://www.npmjs.com/package/@fabianf4/ezskills" target="_blank" rel="noreferrer" class="project__link" data-i18n-aria="proj-aria-ezskills-npm">npm</a>
                         </div>
                     </div>
                 </article>
@@ -286,8 +298,8 @@
                             <span class="project__tag">CSS</span>
                         </div>
                         <div class="project__links">
-                            <a href="https://github.com/fabianf4/projectInrelectricasIMAC" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo">Repository</a>
-                            <a href="https://project-inrelectricas-imac.vercel.app/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live">Live</a>
+                            <a href="https://github.com/fabianf4/projectInrelectricasIMAC" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo" data-i18n-aria="proj-aria-imac-repo">Repository</a>
+                            <a href="https://project-inrelectricas-imac.vercel.app/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live" data-i18n-aria="proj-aria-imac-live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -302,8 +314,8 @@
                             <span class="project__tag">CSS</span>
                         </div>
                         <div class="project__links">
-                            <a href="https://github.com/fabianf4/training-web-3" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo">Repository</a>
-                            <a href="https://fabianf4.github.io/training-web-3/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live">Live</a>
+                            <a href="https://github.com/fabianf4/training-web-3" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo" data-i18n-aria="proj-aria-news-repo">Repository</a>
+                            <a href="https://fabianf4.github.io/training-web-3/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live" data-i18n-aria="proj-aria-news-live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -318,8 +330,8 @@
                             <span class="project__tag">CSS</span>
                         </div>
                         <div class="project__links">
-                            <a href="https://github.com/fabianf4/training-web-2" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo">Repository</a>
-                            <a href="https://fabianf4.github.io/training-web-2/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live">Live</a>
+                            <a href="https://github.com/fabianf4/training-web-2" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo" data-i18n-aria="proj-aria-huddle-repo">Repository</a>
+                            <a href="https://fabianf4.github.io/training-web-2/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live" data-i18n-aria="proj-aria-huddle-live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -336,8 +348,8 @@
                             <span class="project__tag">Styled Components</span>
                         </div>
                         <div class="project__links">
-                            <a href="https://github.com/fabianf4/training-web-1" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo">Repository</a>
-                            <a href="https://fabianf4.github.io/training-web-1/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live">Live</a>
+                            <a href="https://github.com/fabianf4/training-web-1" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-repo" data-i18n-aria="proj-aria-space-repo">Repository</a>
+                            <a href="https://fabianf4.github.io/training-web-1/" target="_blank" rel="noreferrer" class="project__link" data-i18n="proj-live" data-i18n-aria="proj-aria-space-live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -346,51 +358,56 @@
 
         <section class="section" id="hobbies" aria-labelledby="hobbies-title">
             <div class="section-header">
-                <h2 class="section-title" id="hobbies-title" data-i18n="hobbies-title">🎮&nbsp;Hobbies</h2>
+                <h2 class="section-title" id="hobbies-title" data-i18n-html="hobbies-title"><span aria-hidden="true">🎮</span>&nbsp;Hobbies</h2>
                 <span class="section-line"></span>
             </div>
             <div class="hobbies__chips">
-                <span class="hobbies__chip" data-i18n="hobby-1">🎮 Play VideoGames</span>
-                <span class="hobbies__chip" data-i18n="hobby-2">📺 Watch series</span>
-                <span class="hobbies__chip" data-i18n="hobby-3">🎵 Listen to music</span>
-                <span class="hobbies__chip" data-i18n="hobby-4">📖 Learn</span>
-                <span class="hobbies__chip" data-i18n="hobby-5">💃 Dance</span>
-                <span class="hobbies__chip" data-i18n="hobby-6">🏊 Swim</span>
+                <span class="hobbies__chip" data-i18n-html="hobby-1"><span aria-hidden="true">🎮</span> Play VideoGames</span>
+                <span class="hobbies__chip" data-i18n-html="hobby-2"><span aria-hidden="true">📺</span> Watch series</span>
+                <span class="hobbies__chip" data-i18n-html="hobby-3"><span aria-hidden="true">🎵</span> Listen to music</span>
+                <span class="hobbies__chip" data-i18n-html="hobby-4"><span aria-hidden="true">📖</span> Learn</span>
+                <span class="hobbies__chip" data-i18n-html="hobby-5"><span aria-hidden="true">💃</span> Dance</span>
+                <span class="hobbies__chip" data-i18n-html="hobby-6"><span aria-hidden="true">🏊</span> Swim</span>
             </div>
         </section>
 
         <section class="section" id="contact" aria-labelledby="contact-title">
             <div class="section-header">
-                <h2 class="section-title" id="contact-title" data-i18n="contact-title">✉️&nbsp;Contact</h2>
+                <h2 class="section-title" id="contact-title" data-i18n-html="contact-title"><span aria-hidden="true">✉️</span>&nbsp;Contact</h2>
                 <span class="section-line"></span>
             </div>
             <div class="contact__inner">
-                <form class="contact__form" action="https://formsubmit.co/fabianfa.munoz@gmail.com" method="post">
+                <form class="contact__form" action="https://formsubmit.co/fabianfa.munoz@gmail.com" method="post" novalidate>
                     <input type="hidden" name="_captcha" value="false" />
                     <div class="contact__field">
                         <label for="name" class="contact__label" data-i18n="form-name">Name</label>
-                        <input type="text" name="name" id="name" class="contact__input" required />
+                        <input type="text" name="name" id="name" class="contact__input" autocomplete="name" required aria-describedby="name-error" />
+                        <span id="name-error" class="contact__error" role="alert"></span>
                     </div>
                     <div class="contact__field">
                         <label for="email" class="contact__label" data-i18n="form-email">Email</label>
-                        <input type="email" name="email" id="email" class="contact__input" required />
+                        <input type="email" name="email" id="email" class="contact__input" autocomplete="email" required aria-describedby="email-error" />
+                        <span id="email-error" class="contact__error" role="alert"></span>
                     </div>
                     <div class="contact__field">
                         <label for="subject" class="contact__label" data-i18n="form-subject">Subject</label>
-                        <input type="text" name="subject" id="subject" class="contact__input" required />
+                        <input type="text" name="subject" id="subject" class="contact__input" autocomplete="off" required aria-describedby="subject-error" />
+                        <span id="subject-error" class="contact__error" role="alert"></span>
                     </div>
                     <div class="contact__field">
                         <label for="message" class="contact__label" data-i18n="form-message">Message</label>
-                        <textarea name="message" id="message" class="contact__textarea" required></textarea>
+                        <textarea name="message" id="message" class="contact__textarea" autocomplete="off" required aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="contact__error" role="alert"></span>
                     </div>
+                    <div id="form-status" class="contact__form-status" role="status" aria-live="polite"></div>
                     <button type="submit" class="btn btn--primary contact__submit" data-i18n="form-send">Send</button>
                 </form>
                 <div class="contact__direct">
-                    <p class="contact__email" data- o8n="contact-direct">Or email me directly:</p>
-                    <a href="mailto:fabianfa.munoz@gmail.com" class="project__link">fabianfa.munoz@gmail.com</a>
+                    <p class="contact__email" data-i18n="contact-direct">Or email me directly:</p>
+                    <a href="mailto:fabianfa.munoz@gmail.com" class="project__link" data-i18n-aria="email-aria">fabianfa.munoz@gmail.com</a>
                     <div class="contact__social">
-                        <a href="https://github.com/fabianf4" target="_blank" rel="noreferrer" class="contact__social-link">GitHub</a>
-                        <a href="https://www.linkedin.com/in/fabianf4-dev/" target="_blank" rel="noreferrer" class="contact__social-link">LinkedIn</a>
+                        <a href="https://github.com/fabianf4" target="_blank" rel="noreferrer" class="contact__social-link" data-i18n-aria="social-aria-github">GitHub</a>
+                        <a href="https://www.linkedin.com/in/fabianf4-dev/" target="_blank" rel="noreferrer" class="contact__social-link" data-i18n-aria="social-aria-linkedin">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -398,17 +415,17 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text" data-i18n="footer-text">Made with love by Fabian Esteban Muñoz Lopez</p>
+        <p class="footer__text" data-i18n-html="footer-text">Made with <span aria-hidden="true">❤️</span> by Fabian Esteban Muñoz Lopez</p>
     </footer>
 
     <div class="toast" id="toast" role="alert" aria-live="polite">
-        <span class="toast__icon">✓</span>
-        <span class="toast__message" data-i18n="toast-success">¡Gracias por escribirme! Me pondré en contacto contigo pronto</span>
+        <span class="toast__icon" aria-hidden="true">✓</span>
+        <span class="toast__message" data-i18n-html="toast-success">¡Gracias por escribirme! Me pondré en contacto contigo pronto</span>
     </div>
 
     <div class="toast toast--error" id="toast-error" role="alert" aria-live="assertive">
-        <span class="toast__icon">✕</span>
-        <span class="toast__message" data-i18n="toast-error">Oops, algo salió mal. Escríbeme a fabianfa.munoz@gmail.com</span>
+        <span class="toast__icon" aria-hidden="true">✕</span>
+        <span class="toast__message" data-i18n-html="toast-error">Oops, algo salió mal. Escríbeme a fabianfa.munoz@gmail.com</span>
     </div>
 
     <script src="assets/js/i18n.js"></script>
@@ -416,5 +433,17 @@
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <noscript>
+        <style>
+            .lang-toggle, .theme-toggle, .hamburger { display: none; }
+            .nav__list { display: flex !important; position: static !important; flex-direction: row !important; padding: 0 !important; background: none !important; backdrop-filter: none !important; border-bottom: none !important; }
+            .contact__form { display: none; }
+        </style>
+        <p style="padding: 16px 24px; background: #fff3cd; color: #856404; text-align: center; font-size: 14px;">
+            JavaScript is disabled. The contact form requires JavaScript.
+            Direct resume links: <a href="assets/pdf/resume-en.pdf" download>English</a> · <a href="assets/pdf/resume.pdf" download>Español</a>.
+        </p>
+    </noscript>
 </body>
 </html>

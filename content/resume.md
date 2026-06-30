@@ -16,7 +16,7 @@ Ingeniero de Sistemas con experiencia en desarrollo de aplicaciones empresariale
 - **Correo:** fabianfa.munoz@gmail.com
 - **GitHub:** github.com/fabianf4
 - **LinkedIn:** linkedin.com/in/fabianf4-dev
-- **Portfolio:** fabianf4.is-a.dev
+- **Portfolio:** fabianf4.dev
 - **Ubicacion:** Sogamoso, Boyaca / Bogota, Colombia
 
 ---

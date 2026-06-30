@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fabianf4.is-a.dev/sitemap.xml
+Sitemap: https://fabianf4.dev/sitemap.xml
