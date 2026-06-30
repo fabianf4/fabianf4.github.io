@@ -1,86 +1,60 @@
-// contact.js — Envío del formulario de contacto via iframe (sin CORS)
-// Usa un iframe oculto como target para evitar problemas con formsubmit.co
-
-var iframe = document.createElement('iframe');
-iframe.name = 'form-hidden-frame';
-iframe.style.display = 'none';
-document.body.appendChild(iframe);
+// contact.js — Envío del formulario de contacto via fetch a formsubmit.co
+// Maneja éxito/error con toasts, evita doble submit con aria-busy + disabled
 
 var form = document.querySelector('.contact__form');
 var toast = document.getElementById('toast');
 var toastError = document.getElementById('toast-error');
 var formStatus = document.getElementById('form-status');
+var submitBtn = form.querySelector('.contact__submit');
 
-form.target = 'form-hidden-frame';
-
-function getLang() {
-    return document.documentElement.lang || 'en';
+function showToast(toastEl) {
+    if (!toastEl) return;
+    toastEl.classList.add('toast--visible');
+    setTimeout(function() {
+        toastEl.classList.remove('toast--visible');
+    }, 5000);
 }
 
-function t(key) {
-    return (i18n[key] && i18n[key][getLang()]) || '';
-}
-
-function setError(field, message) {
-    var errorEl = document.getElementById(field.id + '-error');
-    if (errorEl) errorEl.textContent = message || '';
-    if (message) {
-        field.setAttribute('aria-invalid', 'true');
+function setBusy(busy) {
+    submitBtn.disabled = busy;
+    if (busy) {
+        submitBtn.setAttribute('aria-busy', 'true');
     } else {
-        field.removeAttribute('aria-invalid');
+        submitBtn.removeAttribute('aria-busy');
     }
 }
 
-function clearErrors() {
-    form.querySelectorAll('.contact__error').forEach(function(el) { el.textContent = ''; });
-    form.querySelectorAll('[aria-invalid]').forEach(function(el) { el.removeAttribute('aria-invalid'); });
-    if (formStatus) formStatus.textContent = '';
-}
-
-form.querySelectorAll('.contact__input, .contact__textarea').forEach(function(input) {
-    input.addEventListener('input', function() {
-        if (input.getAttribute('aria-invalid') === 'true' && input.checkValidity()) {
-            setError(input, '');
-        }
-    });
-    input.addEventListener('blur', function() {
-        if (input.hasAttribute('required') && !input.checkValidity()) {
-            var key = 'form-' + input.id + '-error';
-            setError(input, t(key));
-        }
-    });
-});
-
-function validateForm() {
-    clearErrors();
-    var fields = form.querySelectorAll('.contact__input, .contact__textarea');
-    var firstInvalid = null;
-    fields.forEach(function(field) {
-        if (!field.checkValidity()) {
-            var key = 'form-' + field.id + '-error';
-            setError(field, t(key));
-            if (!firstInvalid) firstInvalid = field;
-        }
-    });
-    return firstInvalid;
-}
+setupFormValidation(form);
 
 form.addEventListener('submit', function(e) {
-    var firstInvalid = validateForm();
+    e.preventDefault();
+    var firstInvalid = validateForm(form);
     if (firstInvalid) {
-        e.preventDefault();
         if (formStatus) formStatus.textContent = t('form-status-invalid');
         firstInvalid.focus();
         return;
     }
     if (formStatus) formStatus.textContent = '';
-});
 
-var iframeLoaded = false;
-iframe.addEventListener('load', function() {
-    iframeLoaded = true;
-    toast.classList.add('toast--visible');
-    setTimeout(function() {
-        toast.classList.remove('toast--visible');
-    }, 5000);
+    setBusy(true);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(function(r) {
+        if (r.ok) {
+            showToast(toast);
+            form.reset();
+        } else {
+            showToast(toastError);
+        }
+    })
+    .catch(function() {
+        showToast(toastError);
+    })
+    .then(function() {
+        setBusy(false);
+    });
 });

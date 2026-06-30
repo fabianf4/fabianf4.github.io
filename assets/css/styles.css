@@ -848,6 +848,11 @@ img {
     align-self: flex-start;
 }
 
+.contact__submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .contact__direct {
     display: flex;
     flex-direction: column;
